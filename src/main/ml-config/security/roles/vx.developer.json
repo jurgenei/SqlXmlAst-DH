@@ -1,0 +1,6 @@
+{
+  "role-name": "vx.developer",
+  "description": "data hub dev role",
+  "role": ["vx.generalist"],
+  "privilege": []
+}

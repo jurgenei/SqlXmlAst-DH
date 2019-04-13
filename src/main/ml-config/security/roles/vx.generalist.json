@@ -1,0 +1,6 @@
+{
+  "role-name": "vx.generalist",
+  "description": "data hub blue print user role",
+  "role": ["data-hub-role"],
+  "privilege": []
+}
