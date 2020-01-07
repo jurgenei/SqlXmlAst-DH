@@ -1,7 +1,7 @@
 
 # What is SqlXmlPub?
 
-SqlXmlPub is the publishing frontend behind the [SqlXmlAst](https://github.com/jurgenei/SqlXmlAst/blob/master/README.md) [SqlXmlLin],(https://github.com/jurgenei/SqlXmlLin/blob/master/README.md) pipeline.
+SqlXmlPub is the publishing frontend behind the [SqlXmlAst](https://github.com/jurgenei/SqlXmlAst/blob/master/README.md), [SqlXmlLin](https://github.com/jurgenei/SqlXmlLin/blob/master/README.md) pipeline.
 
 # Publishing
 Ideas
