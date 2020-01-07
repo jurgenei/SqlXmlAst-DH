@@ -7,7 +7,8 @@ SqlXmlPub is frontend to make all work parsing work in [SqlXmlAst](https://githu
 Ideas
 * linking technical documentation, leveraging XML technolgies (Dita & DocBook)
 * Node.js, Stencil.js, material design, d3.js, react, vue and all that.
-* Multimodel databases
+* Multimodel databases - need to store and query xml and graphs
+* Dockerized solution
 
 # See Also
 *  [SqlXmlAst](https://github.com/jurgenei/SqlXmlAst/blob/master/README.md)
