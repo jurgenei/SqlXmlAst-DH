@@ -6,7 +6,7 @@ SqlXmlPub is the publishing frontend for the [SqlXmlAst](https://github.com/jurg
 # Publishing
 Ideas
 * linking technical documentation, leveraging XML technolgies (Dita & DocBook)
-* Node.js, Stencil.js, material design, d3.js, react, vue and all that.
+* [Node.js](https://nodejs.org/en/about/), [Stencil.js](https://stenciljs.com/docs/introduction), [material design, d3.js](https://material.io/design/), [gojs](https://gojs.net/latest/index.html), react, vue and all that.
 * Multimodel databases - need to store xml/csv data and graphs
 * Dockerized solution
 
