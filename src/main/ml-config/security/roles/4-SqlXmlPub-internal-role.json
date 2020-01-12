@@ -1,0 +1,5 @@
+{
+  "role-name" : "SqlXmlPub-internal",
+  "description" : "Internal role used for amping",
+  "role" : [ "SqlXmlPub-writer" ]
+}

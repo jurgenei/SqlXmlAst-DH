@@ -1,6 +1,0 @@
-{
-  "role-name": "vx.manager",
-  "description": "data hub manager role",
-  "role": ["vx.generalist"],
-  "privilege": []
-}
