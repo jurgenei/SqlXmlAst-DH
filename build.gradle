@@ -15,7 +15,7 @@ configurations {
 }
 
 dependencies {
-	mlcp "com.marklogic:mlcp:9.0.7"
+	mlcp "com.marklogic:mlcp:10.0.3"
 
 	/**
 	 * mlcp uses Log4j for logging, and if Log4j can't find a configuration file, it will complain and you'll
@@ -25,13 +25,57 @@ dependencies {
 	mlcp files("lib")
 }
 
+
+
 task importSDP(type: com.marklogic.gradle.task.MlcpTask) {
+	output_uri_replace = ".*sdp\\.zip/,'oracle/sdp/'"
+	output_collections = "oracle.sdp"
+	input_file_path    = "../SqlXmlLin/build/zipml/sdp.zip"
+	
 	classpath = configurations.mlcp
 	command = "IMPORT"
 	database = mlAppConfig.contentDatabaseName
-	input_file_path = "data/sdp.zip"
-	input_file_type = "xml"
-	output_uri_replace = ".*data,'/'"
-	output_collections = "oracle.sdp"
 	output_permissions = "rest-reader,read,rest-writer,update"
+	input_compressed   = "true"
 }
+
+task importDSA(type: com.marklogic.gradle.task.MlcpTask) {
+	output_uri_replace = ".*dsa\\.zip/,'oracle/dsa/'"
+	output_collections = "oracle.dsa"
+	input_file_path    = "../SqlXmlLin/build/zipml/dsa.zip"
+	
+    classpath = configurations.mlcp
+	command = "IMPORT"
+	database = mlAppConfig.contentDatabaseName
+	output_permissions = "rest-reader,read,rest-writer,update"
+	input_compressed   = "true"
+}
+
+task importBUSS(type: com.marklogic.gradle.task.MlcpTask) {
+	output_uri_replace = ".*buss\\.zip/,'oracle/buss/'"
+	output_collections = "oracle.buss"
+	input_file_path    = "../SqlXmlLin/build/zipml/buss.zip"
+	
+    classpath = configurations.mlcp
+	command = "IMPORT"
+	database = mlAppConfig.contentDatabaseName
+	output_permissions = "rest-reader,read,rest-writer,update"
+	input_compressed   = "true"
+}
+
+task importcons(type: com.marklogic.gradle.task.MlcpTask) {
+	output_uri_replace = ".*cons\\.zip/,'oracle/cons/'"
+	output_collections = "oracle.cons"
+	input_file_path    = "../SqlXmlLin/build/zipml/cons.zip"
+	
+    classpath = configurations.mlcp
+	command = "IMPORT"
+	database = mlAppConfig.contentDatabaseName
+	output_permissions = "rest-reader,read,rest-writer,update"
+	input_compressed   = "true"
+}
+
+
+
+
+
