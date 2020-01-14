@@ -1,0 +1,12 @@
+{
+  "server-name" : "%%NAME%%",
+  "group-name" : "Default",
+  "server-type" : "http",
+  "enabled" : true,
+  "root" : "/",
+  "port" : 8006,
+  "authentication" : "application-level",
+  "default-user": "admin",
+  "content-database" : "%%DATABASE%%",
+  "modules-database" : "%%MODULES_DATABASE%%"
+}
