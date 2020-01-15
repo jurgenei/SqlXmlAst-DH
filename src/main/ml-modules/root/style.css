@@ -1,0 +1,61 @@
+body {
+    font-family: "Ing Me", Times, serif;
+    background-color: Honeydew;
+}
+h1 {
+    margin: 2px;
+    padding: 2px;
+}
+.sql-body {
+    font-family: "Consolas";
+    white-space: pre;
+    background-color: White;
+}
+.t {
+    font-weight: bold;
+}
+.id {
+    color: green;
+}
+.id-table {
+    color: Red;
+}
+.id-table-alias {
+    color: Red;
+    font-style: italic;
+}
+.id-column {
+    color: Purple;
+}
+.id-column-alias {
+    color: Purple;
+    font-style: italic;
+}
+.comment {
+    color: Gray;
+}
+.const {
+    color: Blue;
+}
+.column-list {
+    background-color: LightSalmon;
+}
+.select-list-elements {
+    background-color: Khaki;
+}
+.table-ref {
+    background-color: Aquamarine;
+}
+.header {
+    border-radius: 5px;
+    background: Thistle;
+    padding: 1px 5px 1px 5px;
+}
+.debug {
+    border-radius: 5px;
+    background: MistyRose;
+    padding: 1px 5px 1px 5px;
+ }
+ 
+
+    

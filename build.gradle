@@ -26,9 +26,13 @@ dependencies {
 }
 
 
+task importAll(type: org.gradle.api.DefaultTask) {
+}
+
+
 
 task importSDP(type: com.marklogic.gradle.task.MlcpTask) {
-	output_uri_replace = ".*sdp\\.zip/,'oracle/sdp/'"
+	output_uri_replace = ".*sdp\\.zip/,'sdp/'"
 	output_collections = "oracle.sdp"
 	input_file_path    = "../SqlXmlLin/build/zipml/sdp.zip"
 	
@@ -40,7 +44,7 @@ task importSDP(type: com.marklogic.gradle.task.MlcpTask) {
 }
 
 task importDSA(type: com.marklogic.gradle.task.MlcpTask) {
-	output_uri_replace = ".*dsa\\.zip/,'oracle/dsa/'"
+	output_uri_replace = ".*dsa\\.zip/,'dsa/'"
 	output_collections = "oracle.dsa"
 	input_file_path    = "../SqlXmlLin/build/zipml/dsa.zip"
 	
@@ -52,7 +56,7 @@ task importDSA(type: com.marklogic.gradle.task.MlcpTask) {
 }
 
 task importBUSS(type: com.marklogic.gradle.task.MlcpTask) {
-	output_uri_replace = ".*buss\\.zip/,'oracle/buss/'"
+	output_uri_replace = ".*buss\\.zip/,'buss/'"
 	output_collections = "oracle.buss"
 	input_file_path    = "../SqlXmlLin/build/zipml/buss.zip"
 	
@@ -63,8 +67,8 @@ task importBUSS(type: com.marklogic.gradle.task.MlcpTask) {
 	input_compressed   = "true"
 }
 
-task importcons(type: com.marklogic.gradle.task.MlcpTask) {
-	output_uri_replace = ".*cons\\.zip/,'oracle/cons/'"
+task importCONS(type: com.marklogic.gradle.task.MlcpTask) {
+	output_uri_replace = ".*cons\\.zip/,'cons/'"
 	output_collections = "oracle.cons"
 	input_file_path    = "../SqlXmlLin/build/zipml/cons.zip"
 	
@@ -74,6 +78,61 @@ task importcons(type: com.marklogic.gradle.task.MlcpTask) {
 	output_permissions = "rest-reader,read,rest-writer,update"
 	input_compressed   = "true"
 }
+
+task importBUSSxref(type: com.marklogic.gradle.task.MlcpTask) {
+	output_uri_replace = ".*build/html/,''"
+	output_collections = "oracle.buss"
+	input_file_path    = "../SqlXmlLin/build/html/buss/xref.xml"
+	
+    classpath = configurations.mlcp
+	command = "IMPORT"
+	database = mlAppConfig.contentDatabaseName
+	output_permissions = "rest-reader,read,rest-writer,update"
+}
+
+task importCONSxref(type: com.marklogic.gradle.task.MlcpTask) {
+	output_uri_replace = ".*build/html/,''"
+	output_collections = "oracle.cons"
+	input_file_path    = "../SqlXmlLin/build/html/cons/xref.xml"
+	
+    classpath = configurations.mlcp
+	command = "IMPORT"
+	database = mlAppConfig.contentDatabaseName
+	output_permissions = "rest-reader,read,rest-writer,update"
+}
+
+task importDSAxref(type: com.marklogic.gradle.task.MlcpTask) {
+	output_uri_replace = ".*build/html/,''"
+	output_collections = "oracle.dsa"
+	input_file_path    = "../SqlXmlLin/build/html/dsa/xref.xml"
+	
+    classpath = configurations.mlcp
+	command = "IMPORT"
+	database = mlAppConfig.contentDatabaseName
+	output_permissions = "rest-reader,read,rest-writer,update"
+}
+
+
+task importSDPxref(type: com.marklogic.gradle.task.MlcpTask) {
+	output_uri_replace = ".*build/html/,''"
+	output_collections = "oracle.sdp"
+	input_file_path    = "../SqlXmlLin/build/html/sdp/xref.xml"
+	
+    classpath = configurations.mlcp
+	command = "IMPORT"
+	database = mlAppConfig.contentDatabaseName
+	output_permissions = "rest-reader,read,rest-writer,update"
+}
+
+
+importAll.dependsOn importSDP
+importAll.dependsOn importDSA
+importAll.dependsOn importBUSS
+importAll.dependsOn importCONS
+importAll.dependsOn importSDPxref
+importAll.dependsOn importDSAxref
+importAll.dependsOn importBUSSxref
+importAll.dependsOn importCONSxref
 
 
 
