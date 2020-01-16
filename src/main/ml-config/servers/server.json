@@ -8,5 +8,7 @@
   "authentication" : "application-level",
   "default-user": "admin",
   "content-database" : "%%DATABASE%%",
-  "modules-database" : "%%MODULES_DATABASE%%"
+  "modules-database" : "%%MODULES_DATABASE%%",
+  "rewrite-resolves-globally": false,
+  "url-rewriter": "/xslt-rewrite-handler.xqy"
 }
